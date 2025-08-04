@@ -3,25 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vilius Gražulis</title>
+    <title>Vilius Gražulis - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
     <header>
-        <h1>Vilius Gražulis</h1>
-        <p>Full Stack Developer</p>
+        <div class="header-content">
+            <h1>Vilius Gražulis</h1>
+            <p class="title-glitch" data-text="Full Stack Developer">Full Stack Developer</p>
+            <div class="header-line"></div>
+        </div>
     </header>
     
     <section id="about">
-        <h2>About Me</h2>
-        <p>Passionate full stack developer with experience in web development, Python, PHP, and various modern technologies. I enjoy creating innovative solutions and continuously learning new technologies.</p>
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01</span>
+                About Me
+            </h2>
+            <div class="about-content">
+                <p>Passionate full stack developer with experience in web development, Python, PHP, and various modern technologies. I enjoy creating innovative solutions and continuously learning new technologies.</p>
+                <div class="tech-grid">
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">PHP</span>
+                    <span class="tech-item">Laravel</span>
+                    <span class="tech-item">CSS3</span>
+                    <span class="tech-item">HTML5</span>
+                </div>
+            </div>
+        </div>
     </section>
     
     <section id="projects">
-        <h2>Projects</h2>
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02</span>
+                Projects
+            </h2>
+            
+            <div class="projects-grid">
+            <div class="projects-grid">
         
         <div class="project">
-            <h3>LarchSupply</h3>
+            <div class="project-header">
+                <h3>LarchSupply</h3>
+                <div class="project-status">Active</div>
+            </div>
             <p>Modern web application built with Blade templates for supply management solutions. Recently updated with new features and improvements.</p>
             <div class="project-meta">
                 <span class="tech-stack">Blade Templates</span>
@@ -34,7 +66,10 @@
         </div>
         
         <div class="project">
-            <h3>AutoCraft</h3>
+            <div class="project-header">
+                <h3>AutoCraft</h3>
+                <div class="project-status">Stable</div>
+            </div>
             <p>PHP-based automotive management system with comprehensive features for vehicle tracking, maintenance scheduling, and inventory management.</p>
             <div class="project-meta">
                 <span class="tech-stack">PHP</span>
@@ -47,7 +82,10 @@
         </div>
         
         <div class="project">
-            <h3>CA BTC</h3>
+            <div class="project-header">
+                <h3>CA BTC</h3>
+                <div class="project-status">Complete</div>
+            </div>
             <p>Python application for Bitcoin and cryptocurrency analysis with data processing capabilities. Features real-time data analysis and visualization.</p>
             <div class="project-meta">
                 <span class="tech-stack">Python</span>
@@ -57,6 +95,9 @@
                 <a href="https://github.com/Viliusg94/CA_BTC" class="btn-github">GitHub</a>
                 <button class="btn-demo" onclick="showDemoInfo('CA BTC', 'This is a Python application for cryptocurrency analysis. Visit the GitHub repository to see the source code, sample outputs, and setup instructions.')">Live Demo</button>
             </div>
+        </div>
+        
+        </div>
         </div>
     </section>
     
@@ -73,7 +114,7 @@
     </div>
     
     <footer>
-        <p>Contact: <a href="mailto:contact@vilius.dev">contact@vilius.dev</a> | <a href="https://github.com/Viliusg94">GitHub Profile</a></p>
+        <p>Contact: <a href="mailto:contact@vilius.dev">Viliusg94@gmail.com</a> | <a href="https://github.com/Viliusg94">GitHub Profile</a></p>
     </footer>
 
     <script>
