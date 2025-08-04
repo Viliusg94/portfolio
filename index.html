@@ -18,27 +18,19 @@
     </section>
     
     <section id="projects">
-        <h2>Featured Projects</h2>
+        <h2>Projects</h2>
         
-        <div class="project featured">
+        <div class="project">
             <h3>LarchSupply</h3>
             <p>Modern web application built with Blade templates for supply management solutions. Recently updated with new features and improvements.</p>
             <div class="project-meta">
                 <span class="tech-stack">Blade Templates</span>
                 <span class="last-updated">Updated 2 minutes ago</span>
             </div>
-            <a href="https://github.com/Viliusg94/larchsupply">GitHub</a>
-        </div>
-        
-        <div class="project featured">
-            <h3>GitHub Pages Portfolio</h3>
-            <p>Professional portfolio website hosted on GitHub Pages. Demonstrates clean design and responsive web development.</p>
-            <div class="project-meta">
-                <span class="tech-stack">GitHub Pages</span>
-                <span class="last-updated">Updated 18 minutes ago</span>
+            <div class="project-links">
+                <a href="https://github.com/Viliusg94/larchsupply" class="btn-github">GitHub</a>
+                <button class="btn-demo" onclick="showDemoInfo('LarchSupply', 'This is a Blade/Laravel application that requires a server environment to run. Visit the GitHub repository to see the source code and setup instructions.')">Live Demo</button>
             </div>
-            <a href="https://github.com/Viliusg94/viliusg94.github.io">GitHub</a>
-            <a href="https://viliusg94.github.io">Live Demo</a>
         </div>
         
         <div class="project">
@@ -48,7 +40,10 @@
                 <span class="tech-stack">PHP</span>
                 <span class="last-updated">Updated June 27</span>
             </div>
-            <a href="https://github.com/Viliusg94/autocraft">GitHub</a>
+            <div class="project-links">
+                <a href="https://github.com/Viliusg94/autocraft" class="btn-github">GitHub</a>
+                <button class="btn-demo" onclick="showDemoInfo('AutoCraft', 'This is a PHP application that requires a server environment to run. Visit the GitHub repository to see the source code and setup instructions.')">Live Demo</button>
+            </div>
         </div>
         
         <div class="project">
@@ -58,34 +53,49 @@
                 <span class="tech-stack">Python</span>
                 <span class="last-updated">Updated May 24</span>
             </div>
-            <a href="https://github.com/Viliusg94/CA_BTC">GitHub</a>
-        </div>
-        
-        <div class="project">
-            <h3>Cat Adoption Website</h3>
-            <p>Beautiful interactive website for helping cats find homes. Features responsive design, image carousel, modal galleries, and dynamic form handling with JavaScript.</p>
-            <div class="project-meta">
-                <span class="tech-stack">HTML/CSS/JS</span>
-                <span class="last-updated">Updated Dec 19, 2024</span>
+            <div class="project-links">
+                <a href="https://github.com/Viliusg94/CA_BTC" class="btn-github">GitHub</a>
+                <button class="btn-demo" onclick="showDemoInfo('CA BTC', 'This is a Python application for cryptocurrency analysis. Visit the GitHub repository to see the source code, sample outputs, and setup instructions.')">Live Demo</button>
             </div>
-            <a href="https://github.com/Viliusg94/IAmJuniorBaigiamasis">GitHub</a>
-            <a href="https://viliusg94.github.io/IAmJuniorBaigiamasis/">Live Demo</a>
-        </div>
-        
-        <div class="project">
-            <h3>JavaScript 30 Projects</h3>
-            <p>Collection of 30 vanilla JavaScript projects including drum kit, clock, image gallery, and more. Demonstrates pure JavaScript skills without frameworks.</p>
-            <div class="project-meta">
-                <span class="tech-stack">JavaScript/CSS</span>
-                <span class="last-updated">Updated Feb 23, 2018</span>
-            </div>
-            <a href="https://github.com/Viliusg94/js30">GitHub</a>
-            <a href="https://viliusg94.github.io/js30/">Live Demo</a>
         </div>
     </section>
+    
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+            <div class="modal-buttons">
+                <button onclick="closeModal()" class="btn-github">Close</button>
+            </div>
+        </div>
+    </div>
     
     <footer>
         <p>Contact: <a href="mailto:contact@vilius.dev">contact@vilius.dev</a> | <a href="https://github.com/Viliusg94">GitHub Profile</a></p>
     </footer>
+
+    <script>
+        function showDemoInfo(projectName, message) {
+            document.getElementById('modalTitle').textContent = projectName + ' - Demo Info';
+            document.getElementById('modalText').textContent = message;
+            document.getElementById('demoModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('demoModal').style.display = 'none';
+        }
+
+        // Close modal when clicking the X or outside the modal
+        window.onclick = function(event) {
+            const modal = document.getElementById('demoModal');
+            const closeBtn = document.querySelector('.close');
+            
+            if (event.target === modal || event.target === closeBtn) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
