@@ -349,6 +349,43 @@ section {
     filter: brightness(1.1);
 }
 
+.btn-demo.live-demo {
+    background: linear-gradient(135deg, var(--accent-color), #ff8a80, var(--neon-blue));
+    color: var(--background-darker);
+    border: 2px solid var(--accent-color);
+    animation: live-pulse 2s infinite;
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+.btn-demo.live-demo::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: live-shimmer 3s infinite;
+}
+
+.btn-demo.live-demo:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+    animation: live-pulse 1s infinite;
+}
+
+@keyframes live-pulse {
+    0%, 100% { box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3); }
+    50% { box-shadow: 0 10px 35px rgba(255, 107, 107, 0.6); }
+}
+
+@keyframes live-shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
 /* Footer */
 footer {
     text-align: center;
