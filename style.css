@@ -64,6 +64,25 @@ section h2 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.project.featured {
+    border: 2px solid #667eea;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+    position: relative;
+}
+
+.project.featured::before {
+    content: "★ FEATURED";
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    background: #667eea;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
 .project:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -78,6 +97,29 @@ section h2 {
 .project p {
     margin-bottom: 1rem;
     color: #6c757d;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.tech-stack {
+    background: #667eea;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.last-updated {
+    background: #28a745;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
 }
 
 .project a {
